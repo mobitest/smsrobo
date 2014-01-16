@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">短信小网关~</string>
+    <string name="copyright_info">版权所有 2014</string>
+    <string name="login_bottom_version">1.1</string>
+    <string name="login_bottom_text">浙江鸿程出品</string>
+    <string name="action_settings">设置</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="btn_send">开始发送</string>
+    <string name="tv_freq">扫描频率</string>
+    <string name="tv_send_interval">发送间隔</string>
+    <string name="send_start">| | 停止</string>
+    <string name="send_stop">启动</string>
+    <string name="menu_history">发送历史</string>
+    <string name="menu_failure">失败记录</string>
+    <string name="menu_setting">设置</string>
+    <string name="menu_reboot">reboot</string>
+    <string name="menu_test">test</string>
+    <string name="menu_about">关于</string>
+    <string name="service_started">服务运行中</string>
+    <string name="label_imei">本机识别码(IMEI)</string>
+    <string name="label_setting">设置</string>
+    <string name="label_cur_status">下载服务：</string>
+    <string name="label_area">区域</string>
+    <string name="label_fail">发送失败：</string>
+    <string name="dash">----</string>
+    <string name="slash">/</string>
+    <string name="head_run_static">运行统计</string>
+    <string name="head_log">近期日志</string>
+    <string name="label_count_scan">扫描次数：</string>
+    <string name="lab_count_send">发送短信条数：</string>
+    <string name="label_count_get">总数/安排：</string>
+    <string name="label_count_done">派发/寄出/送达：</string>
+    <string name="unwork">未运行</string>
+    <string name="title_activity_fail_list">发送失败记录</string>
+    <string name="title_activity_list_send">发送历史</string>
+    <string name="sample_long_date">2013-01-01 11:00:12</string>
+    <string name="crash_toast_text">啊呀，崩溃了！请把明细报告发给开发人员，以帮助解决问题</string>
+    <string name="sample_verylong_text">绝对是烤箱！！
+ 	    \r\n排名第一。中国人显然太不会用烤箱了，就知道微波炉这种只能温饭的东西。烤箱这玩意儿简直是万能的，比炒菜锅好用多了</string>
+    <string name="cb_tv_showall">全部显示</string>
+    <string name="title_activity_testcase">测试专用</string>
+
+</resources>

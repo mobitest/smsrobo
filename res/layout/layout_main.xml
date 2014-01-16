@@ -1,0 +1,218 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="fill_vertical"
+    android:padding="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity" >
+
+    <Button
+        android:id="@+id/setting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:checked="false"
+        android:text="@string/label_setting"
+        android:visibility="invisible" />
+
+    <RelativeLayout
+        android:id="@+id/layout_status"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" >
+
+        <ToggleButton
+            android:id="@+id/toggleButton1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:checked="false"
+            android:text="@string/btn_send"
+            android:textOff="@string/send_stop"
+            android:textOn="@string/send_start" />
+
+        <TextView
+            android:id="@+id/status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/toggleButton1"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/toggleButton1"
+            android:text="@string/unwork"
+            android:textColor="@color/text_color_gray" />
+
+        <TextView
+            android:id="@+id/label_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/status"
+            android:layout_alignBottom="@+id/status"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/status"
+            android:text="@string/label_cur_status" />
+
+        <TextView
+            android:id="@+id/config"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/toggleButton1"
+            android:layout_alignParentEnd="false"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:text="@string/label_area"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/text_color_blue" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/layout_status"
+        android:layout_alignParentLeft="false"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/head_run_static"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/label_count_scan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/label_count_scan" />
+
+            <TextView
+                android:id="@+id/count_scan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/dash"
+                android:textColor="@color/text_color_blue" />
+
+            <TextView
+                android:id="@+id/labe_count_get"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="@string/label_count_get" />
+
+            <TextView
+                android:id="@+id/count_get"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/dash"
+                android:textColor="@color/text_color_blue" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/slash" />
+
+            <TextView
+                android:id="@+id/count_send"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/dash"
+                android:textColor="@color/text_color_blue" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/label_fail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/label_fail" />
+
+            <TextView
+                android:id="@+id/count_fail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/dash"
+                android:textColor="@color/dynatext" />
+
+        </LinearLayout>
+        <!--
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/label_count_send"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="@string/lab_count_send" />
+
+
+
+        </LinearLayout>
+        -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/label_count_done"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/label_count_done" />
+
+            <TextView
+                android:id="@+id/count_done"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/dash"
+                android:textColor="@color/text_color_blue" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/slash" />
+
+            <TextView
+                android:id="@+id/count_sent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/dash"
+                android:textColor="@color/text_color_blue" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/slash" />
+
+            <TextView
+                android:id="@+id/count_delivered"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/dash"
+                android:textColor="@color/text_color_blue" />
+        </LinearLayout>
+
+        <com.zjhcsoft.sms.LogTextBox
+            android:id="@+id/logTextBox"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp"
+            android:clickable="true"
+            android:scrollbars="vertical"
+            android:text="@string/dash"
+            android:textColor="@color/charttitle" />
+
+    </LinearLayout>
+
+</RelativeLayout>

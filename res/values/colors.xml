@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<!-- 系统背景颜色 -->
+	<color name="top_bottom">#52507F</color>
+
+	<color name="text_color_disabled">#5c608d</color>
+	<!-- 白色文字 -->
+	<color name="text_color_white">#ffffff</color>
+	<color name="transparent">#00000000</color>
+	
+	<color name="dynatext">#9c6500</color>
+	<color name="dynatext2">#809DB9</color>
+	<color name="charttitle">#9D714D</color>
+	<color name="chartbutton">#314B6A</color>
+
+
+	<color name="list_divider_navigator">#5c568e</color>
+
+
+
+
+	<color name="text_bg_comment_count">#EFEBF7</color>
+	<color name="layout_bg_comment_bottom">#4F4C7B</color>
+	<color name="button_bg_comment_ok">#404365</color>
+	<color name="button_text_comment_ok">#C3C3C5</color>
+
+	<color name="table_header_backgroud">#EFEBF7</color>
+
+	<!-- 黑色文字（正文） -->
+	<color name="table_text_color">#000000</color>
+	<color name="kpi_title_text_color">#135cdf</color>
+	<!-- 灰色文字（次标题） -->
+	<color name="date_text_color">#7b7b7b</color>
+	<!-- 图表背景色 -->
+	<color name="chart_bg">#4C3E3B</color>
+	<color name="text_color_blue">#135cdf</color>
+
+	<color name="text_shadow_color">#1D7EC0</color>
+	<color name="text_color_gray">#999999</color>
+	<color name="catalog_bg_color">#f7f7f7</color>
+	
+	<color name="odd_bg_color">#ffffff</color>
+	<color name="even_bg_color">#f6f6f6</color>
+	
+</resources>

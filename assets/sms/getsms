@@ -1,0 +1,635 @@
+{
+  "num":0,
+  "body": [
+    {
+      "id": 2,
+      "target": [
+        "1890001111"
+      ],
+      "text": "小短信测试用。。。"
+    },
+        {
+      "id": 2,
+      "target": [
+        "1890001111"
+      ],
+      "text": "2014-01-04:金华合约机发展量通报如下(按季度累计完成率排名)：\r\n县市/当日发展量/日均指标/季度累计完成率："
+    },
+    {
+      "id": 2,
+      "target": [
+        "1890001111"
+      ],
+      "text": "以下通过短信小网关发送。。。自己手机测了几十条，平均延迟2-3分钟送达。比如我就是一长短信（超过60字符），会自动拆分。（-----------填充I think we need to see your @layout/light_list_item_border to be able to solve this. But for this problem, wouldnt it be easier to put padding on the relative layout itself, and skip all the margins?------）最后添加的时间戳是发出的时间，请与实际收到的时间核对！"
+    },
+    {
+      "id": 2,
+      "target": [
+        "1890001111"
+      ],
+      "text": "test msg1:today we get 121 new customers"
+    },
+    {
+      "id": 2,
+      "target": [
+        "1890001111"
+      ],
+      "text": "test msg1:today we get 122 new customers"
+    },
+    {
+      "id": 2,
+      "target": [
+        "1890001111"
+      ],
+      "text": "test msg1:today we get 123 new customers"
+    },
+    {
+      "id": 2,
+      "target": [
+        "1890001111"
+      ],
+      "text": "test msg1:today we get 124 new customers"
+    },
+    {
+      "id": 2,
+      "target": [
+        "1890001111"
+      ],
+      "text": "test msg1:today we get 125 new customers"
+    },
+    {
+      "id": 2,
+      "target": [
+        "1890001111"
+      ],
+      "text": "test msg1:today we get 126 new customers"
+    },
+    {
+      "id": 2,
+      "target": [
+        "1890001111"
+      ],
+      "text": "test msg1:today we get 127 new customers"
+    },
+    {
+      "id": 2,
+      "target": [
+        "1890001111"
+      ],
+      "text": "test msg1:today we get 128 new customers"
+    },
+    {
+      "id": 2,
+      "target": [
+        "1890001111"
+      ],
+      "text": "test msg1:today we get 129 new customers"
+    },
+    {
+      "id": 1,
+      "target": [
+        "1890001111"
+      ],
+      "text": "新增用户 120，2013年3月5日|新增用户 120，2013年3月5日|新增用户 120|2013年3月5日|新增用户 120|2013年3月5日|新增用户 120|2013年3月5日|新增用户 120|2013年3月5日|新增用户 120|2013年3月5日|新增用户 120|2013年3月5日|新增用户 120|"
+    },
+    {
+      "id": 2,
+      "target": [
+        "1890001111"
+      ],
+      "text": "以下通过短信小网关发送。。。自己手机测了几十条，平均延迟2-3分钟送达。比如我就是一长短信（超过60字符），会自动拆分。（-----------填充I think we need to see your @layout/light_list_item_border to be able to solve this. But for this problem, wouldnt it be easier to put padding on the relative layout itself, and skip all the margins?------）最后添加的时间戳是发出的时间，请与实际收到的时间核对！"
+    },
+    {
+      "id": 2,
+      "target": [
+        "1890001111"
+      ],
+      "text": "test msg1:today we get 121 new customers"
+    },
+    {
+      "id": 2,
+      "target": [
+        "1890001111"
+      ],
+      "text": "test msg1:today we get 122 new customers"
+    },
+    {
+      "id": 2,
+      "target": [
+        "1890001111"
+      ],
+      "text": "test msg1:today we get 123 new customers"
+    },
+    {
+      "id": 2,
+      "target": [
+        "1890001111"
+      ],
+      "text": "test msg1:today we get 124 new customers"
+    },
+    {
+      "id": 2,
+      "target": [
+        "1890001111"
+      ],
+      "text": "test msg1:today we get 125 new customers"
+    },
+    {
+      "id": 2,
+      "target": [
+        "1890001111"
+      ],
+      "text": "test msg1:today we get 126 new customers"
+    },
+    {
+      "id": 2,
+      "target": [
+        "1890001111"
+      ],
+      "text": "test msg1:today we get 127 new customers"
+    },
+    {
+      "id": 2,
+      "target": [
+        "1890001111"
+      ],
+      "text": "test msg1:today we get 128 new customers"
+    },
+    {
+      "id": 2,
+      "target": [
+        "1890001111"
+      ],
+      "text": "test msg1:today we get 129 new customers"
+    },
+    {
+      "id": 1,
+      "target": [
+        "1890001111"
+      ],
+      "text": "新增用户 120，2013年3月5日|新增用户 120，2013年3月5日|新增用户 120|2013年3月5日|新增用户 120|2013年3月5日|新增用户 120|2013年3月5日|新增用户 120|2013年3月5日|新增用户 120|2013年3月5日|新增用户 120|2013年3月5日|新增用户 120|"
+    },
+    {
+      "id": 2,
+      "target": [
+        "1890001111"
+      ],
+      "text": "以下通过短信小网关发送。。。自己手机测了几十条，平均延迟2-3分钟送达。比如我就是一长短信（超过60字符），会自动拆分。（-----------填充I think we need to see your @layout/light_list_item_border to be able to solve this. But for this problem, wouldnt it be easier to put padding on the relative layout itself, and skip all the margins?------）最后添加的时间戳是发出的时间，请与实际收到的时间核对！"
+    },
+    {
+      "id": 2,
+      "target": [
+        "1890001111"
+      ],
+      "text": "test msg1:today we get 121 new customers"
+    },
+    {
+      "id": 2,
+      "target": [
+        "1890001111"
+      ],
+      "text": "test msg1:today we get 122 new customers"
+    },
+    {
+      "id": 2,
+      "target": [
+        "1890001111"
+      ],
+      "text": "test msg1:today we get 123 new customers"
+    },
+    {
+      "id": 2,
+      "target": [
+        "1890001111"
+      ],
+      "text": "test msg1:today we get 124 new customers"
+    },
+    {
+      "id": 2,
+      "target": [
+        "1890001111"
+      ],
+      "text": "test msg1:today we get 125 new customers"
+    },
+    {
+      "id": 2,
+      "target": [
+        "1890001111"
+      ],
+      "text": "test msg1:today we get 126 new customers"
+    },
+    {
+      "id": 2,
+      "target": [
+        "1890001111"
+      ],
+      "text": "test msg1:today we get 127 new customers"
+    },
+    {
+      "id": 2,
+      "target": [
+        "1890001111"
+      ],
+      "text": "test msg1:today we get 128 new customers"
+    },
+    {
+      "id": 2,
+      "target": [
+        "1890001111"
+      ],
+      "text": "test msg1:today we get 129 new customers"
+    },
+    {
+      "id": 1,
+      "target": [
+        "1890001111"
+      ],
+      "text": "新增用户 120，2013年3月5日|新增用户 120，2013年3月5日|新增用户 120|2013年3月5日|新增用户 120|2013年3月5日|新增用户 120|2013年3月5日|新增用户 120|2013年3月5日|新增用户 120|2013年3月5日|新增用户 120|2013年3月5日|新增用户 120|"
+    },
+    {
+      "id": 2,
+      "target": [
+        "1890001111"
+      ],
+      "text": "以下通过短信小网关发送。。。自己手机测了几十条，平均延迟2-3分钟送达。比如我就是一长短信（超过60字符），会自动拆分。（-----------填充I think we need to see your @layout/light_list_item_border to be able to solve this. But for this problem, wouldnt it be easier to put padding on the relative layout itself, and skip all the margins?------）最后添加的时间戳是发出的时间，请与实际收到的时间核对！"
+    },
+    {
+      "id": 2,
+      "target": [
+        "1890001111"
+      ],
+      "text": "test msg1:today we get 121 new customers"
+    },
+    {
+      "id": 2,
+      "target": [
+        "1890001111"
+      ],
+      "text": "test msg1:today we get 122 new customers"
+    },
+    {
+      "id": 2,
+      "target": [
+        "1890001111"
+      ],
+      "text": "test msg1:today we get 123 new customers"
+    },
+    {
+      "id": 2,
+      "target": [
+        "1890001111"
+      ],
+      "text": "test msg1:today we get 124 new customers"
+    },
+    {
+      "id": 2,
+      "target": [
+        "1890001111"
+      ],
+      "text": "test msg1:today we get 125 new customers"
+    },
+    {
+      "id": 2,
+      "target": [
+        "1890001111"
+      ],
+      "text": "test msg1:today we get 126 new customers"
+    },
+    {
+      "id": 2,
+      "target": [
+        "1890001111"
+      ],
+      "text": "test msg1:today we get 127 new customers"
+    },
+    {
+      "id": 2,
+      "target": [
+        "1890001111"
+      ],
+      "text": "test msg1:today we get 128 new customers"
+    },
+    {
+      "id": 2,
+      "target": [
+        "1890001111"
+      ],
+      "text": "test msg1:today we get 129 new customers"
+    },
+    {
+      "id": 1,
+      "target": [
+        "1890001111"
+      ],
+      "text": "新增用户 120，2013年3月5日|新增用户 120，2013年3月5日|新增用户 120|2013年3月5日|新增用户 120|2013年3月5日|新增用户 120|2013年3月5日|新增用户 120|2013年3月5日|新增用户 120|2013年3月5日|新增用户 120|2013年3月5日|新增用户 120|"
+    },
+    {
+      "id": 2,
+      "target": [
+        "1890001111"
+      ],
+      "text": "以下通过短信小网关发送。。。自己手机测了几十条，平均延迟2-3分钟送达。比如我就是一长短信（超过60字符），会自动拆分。（-----------填充I think we need to see your @layout/light_list_item_border to be able to solve this. But for this problem, wouldnt it be easier to put padding on the relative layout itself, and skip all the margins?------）最后添加的时间戳是发出的时间，请与实际收到的时间核对！"
+    },
+    {
+      "id": 2,
+      "target": [
+        "1890001111"
+      ],
+      "text": "test msg1:today we get 121 new customers"
+    },
+    {
+      "id": 2,
+      "target": [
+        "1890001111"
+      ],
+      "text": "test msg1:today we get 122 new customers"
+    },
+    {
+      "id": 2,
+      "target": [
+        "1890001111"
+      ],
+      "text": "test msg1:today we get 123 new customers"
+    },
+    {
+      "id": 2,
+      "target": [
+        "1890001111"
+      ],
+      "text": "test msg1:today we get 124 new customers"
+    },
+    {
+      "id": 2,
+      "target": [
+        "1890001111"
+      ],
+      "text": "test msg1:today we get 125 new customers"
+    },
+    {
+      "id": 2,
+      "target": [
+        "1890001111"
+      ],
+      "text": "test msg1:today we get 126 new customers"
+    },
+    {
+      "id": 2,
+      "target": [
+        "1890001111"
+      ],
+      "text": "test msg1:today we get 127 new customers"
+    },
+    {
+      "id": 2,
+      "target": [
+        "1890001111"
+      ],
+      "text": "test msg1:today we get 128 new customers"
+    },
+    {
+      "id": 2,
+      "target": [
+        "1890001111"
+      ],
+      "text": "test msg1:today we get 129 new customers"
+    },
+    {
+      "id": 1,
+      "target": [
+        "1890001111"
+      ],
+      "text": "新增用户 120，2013年3月5日|新增用户 120，2013年3月5日|新增用户 120|2013年3月5日|新增用户 120|2013年3月5日|新增用户 120|2013年3月5日|新增用户 120|2013年3月5日|新增用户 120|2013年3月5日|新增用户 120|2013年3月5日|新增用户 120|"
+    },
+    {
+      "id": 2,
+      "target": [
+        "1890001111"
+      ],
+      "text": "以下通过短信小网关发送。。。自己手机测了几十条，平均延迟2-3分钟送达。比如我就是一长短信（超过60字符），会自动拆分。（-----------填充I think we need to see your @layout/light_list_item_border to be able to solve this. But for this problem, wouldnt it be easier to put padding on the relative layout itself, and skip all the margins?------）最后添加的时间戳是发出的时间，请与实际收到的时间核对！"
+    },
+    {
+      "id": 2,
+      "target": [
+        "1890001111"
+      ],
+      "text": "test msg1:today we get 121 new customers"
+    },
+    {
+      "id": 2,
+      "target": [
+        "1890001111"
+      ],
+      "text": "test msg1:today we get 122 new customers"
+    },
+    {
+      "id": 2,
+      "target": [
+        "1890001111"
+      ],
+      "text": "test msg1:today we get 123 new customers"
+    },
+    {
+      "id": 2,
+      "target": [
+        "1890001111"
+      ],
+      "text": "test msg1:today we get 124 new customers"
+    },
+    {
+      "id": 2,
+      "target": [
+        "1890001111"
+      ],
+      "text": "test msg1:today we get 125 new customers"
+    },
+    {
+      "id": 2,
+      "target": [
+        "1890001111"
+      ],
+      "text": "test msg1:today we get 126 new customers"
+    },
+    {
+      "id": 2,
+      "target": [
+        "1890001111"
+      ],
+      "text": "test msg1:today we get 127 new customers"
+    },
+    {
+      "id": 2,
+      "target": [
+        "1890001111"
+      ],
+      "text": "test msg1:today we get 128 new customers"
+    },
+    {
+      "id": 2,
+      "target": [
+        "1890001111"
+      ],
+      "text": "test msg1:today we get 129 new customers"
+    },
+    {
+      "id": 1,
+      "target": [
+        "1890001111"
+      ],
+      "text": "新增用户 120，2013年3月5日|新增用户 120，2013年3月5日|新增用户 120|2013年3月5日|新增用户 120|2013年3月5日|新增用户 120|2013年3月5日|新增用户 120|2013年3月5日|新增用户 120|2013年3月5日|新增用户 120|2013年3月5日|新增用户 120|"
+    },
+    {
+      "id": 2,
+      "target": [
+        "1890001111"
+      ],
+      "text": "以下通过短信小网关发送。。。自己手机测了几十条，平均延迟2-3分钟送达。比如我就是一长短信（超过60字符），会自动拆分。（-----------填充I think we need to see your @layout/light_list_item_border to be able to solve this. But for this problem, wouldnt it be easier to put padding on the relative layout itself, and skip all the margins?------）最后添加的时间戳是发出的时间，请与实际收到的时间核对！"
+    },
+    {
+      "id": 2,
+      "target": [
+        "1890001111"
+      ],
+      "text": "test msg1:today we get 121 new customers"
+    },
+    {
+      "id": 2,
+      "target": [
+        "1890001111"
+      ],
+      "text": "test msg1:today we get 122 new customers"
+    },
+    {
+      "id": 2,
+      "target": [
+        "1890001111"
+      ],
+      "text": "test msg1:today we get 123 new customers"
+    },
+    {
+      "id": 2,
+      "target": [
+        "1890001111"
+      ],
+      "text": "test msg1:today we get 124 new customers"
+    },
+    {
+      "id": 2,
+      "target": [
+        "1890001111"
+      ],
+      "text": "test msg1:today we get 125 new customers"
+    },
+    {
+      "id": 2,
+      "target": [
+        "1890001111"
+      ],
+      "text": "test msg1:today we get 126 new customers"
+    },
+    {
+      "id": 2,
+      "target": [
+        "1890001111"
+      ],
+      "text": "test msg1:today we get 127 new customers"
+    },
+    {
+      "id": 2,
+      "target": [
+        "1890001111"
+      ],
+      "text": "test msg1:today we get 128 new customers"
+    },
+    {
+      "id": 2,
+      "target": [
+        "1890001111"
+      ],
+      "text": "test msg1:today we get 129 new customers"
+    },
+    {
+      "id": 1,
+      "target": [
+        "1890001111"
+      ],
+      "text": "新增用户 120，2013年3月5日|新增用户 120，2013年3月5日|新增用户 120|2013年3月5日|新增用户 120|2013年3月5日|新增用户 120|2013年3月5日|新增用户 120|2013年3月5日|新增用户 120|2013年3月5日|新增用户 120|2013年3月5日|新增用户 120|"
+    },
+    {
+      "id": 2,
+      "target": [
+        "1890001111"
+      ],
+      "text": "以下通过短信小网关发送。。。自己手机测了几十条，平均延迟2-3分钟送达。比如我就是一长短信（超过60字符），会自动拆分。（-----------填充I think we need to see your @layout/light_list_item_border to be able to solve this. But for this problem, wouldnt it be easier to put padding on the relative layout itself, and skip all the margins?------）最后添加的时间戳是发出的时间，请与实际收到的时间核对！"
+    },
+    {
+      "id": 2,
+      "target": [
+        "1890001111"
+      ],
+      "text": "test msg1:today we get 121 new customers"
+    },
+    {
+      "id": 2,
+      "target": [
+        "1890001111"
+      ],
+      "text": "test msg1:today we get 122 new customers"
+    },
+    {
+      "id": 2,
+      "target": [
+        "1890001111"
+      ],
+      "text": "test msg1:today we get 123 new customers"
+    },
+    {
+      "id": 2,
+      "target": [
+        "1890001111"
+      ],
+      "text": "test msg1:today we get 124 new customers"
+    },
+    {
+      "id": 2,
+      "target": [
+        "1890001111"
+      ],
+      "text": "test msg1:today we get 125 new customers"
+    },
+    {
+      "id": 2,
+      "target": [
+        "1890001111"
+      ],
+      "text": "test msg1:today we get 126 new customers"
+    },
+    {
+      "id": 2,
+      "target": [
+        "1890001111"
+      ],
+      "text": "test msg1:today we get 127 new customers"
+    },
+    {
+      "id": 2,
+      "target": [
+        "1890001111"
+      ],
+      "text": "test msg1:today we get 128 new customers"
+    },
+    {
+      "id": 2,
+      "target": [
+        "1890001111"
+      ],
+      "text": "test msg1:today we get 129 new customers"
+    },
+    {
+      "id": 2,
+      "target": [
+        "1890001111"
+      ],
+      "text": "test msg1:today we get 130 new customers"
+    }
+    ]
+}

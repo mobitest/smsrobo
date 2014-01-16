@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <TextView
+        android:id="@+id/rel_id"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_margin="5dp"
+        android:ellipsize="middle"
+        android:text="@string/dash"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/reason"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/rel_id"
+        android:layout_margin="5dp"
+        android:ellipsize="middle"
+        android:lines="1"
+        android:text="@string/dash"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="@color/text_color_blue" />
+
+<TextView
+    android:id="@+id/step"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentRight="false"
+    android:layout_alignParentTop="false"
+    android:layout_below="@id/reason"
+    android:layout_centerVertical="true"
+    android:layout_marginRight="15dp"
+    android:text="@string/dash"
+    android:textColor="@color/text_color_blue"
+    android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/scan_dt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_margin="5dp"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:text="@string/dash" />
+
+    <TextView
+        android:id="@+id/fail_dt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/scan_dt"
+        android:layout_margin="5dp"
+        android:text="@string/dash"
+        android:textColor="@color/text_color_gray" />
+
+</RelativeLayout>

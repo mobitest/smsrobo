@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <TextView
+        android:id="@+id/tv_log_rows"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_margin="15dp"
+        android:text="@string/dash"
+        android:textColor="@color/text_color_blue" />
+    
+     <ListView
+         android:id="@android:id/list"
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+         android:layout_above="@id/tv_log_rows"
+         android:drawSelectorOnTop="false" />
+
+     <CheckBox
+         android:id="@+id/cb_show_all"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_alignParentBottom="true"
+         android:layout_alignParentRight="true"
+         android:layout_marginRight="16dp"
+         android:checked="true"
+         android:text="@string/cb_tv_showall" />
+
+     <EditText
+         android:id="@+id/input_msg_search"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_alignParentBottom="true"
+         android:layout_toRightOf="@+id/tv_log_rows"
+         android:hint="id,号码速查"
+         android:lines="1"
+         android:textAppearance="?android:attr/textAppearanceSmall" />
+    
+</RelativeLayout>
