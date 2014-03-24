@@ -24,6 +24,27 @@
         android:entryValues="@array/areavalues_list_preference"
         android:key="area"
         android:title="所属区域" />
+        <EditTextPreference
+            android:defaultValue="06:00"
+            android:dialogTitle="06:00=凌晨6点"
+            android:key="timestart"
+            android:title="最早工作时间" />
+        <EditTextPreference
+            android:defaultValue="23:30"
+            android:dialogTitle="23:30=深夜11点30分"
+            android:key="timestop"
+            android:title="最晚工作时间" />        
+        <EditTextPreference
+            android:defaultValue=""
+            android:key="admin_number"
+            android:inputType="number"
+            android:title="管理员号码" /> 
+         <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="finish_sms"
+            android:summary="一批短信发送完，短信通知管理员"
+            android:title="完成通知短信 "/>
+                                       
         <CheckBoxPreference
             android:defaultValue="true"
             android:key="bootup_auto"
@@ -40,6 +61,7 @@
             android:numeric="integer"
             android:summary="分钟"
             />          
+                           
     <PreferenceCategory android:title="内网服务器" >
         <EditTextPreference
             android:defaultValue="http://134.98.104.25:7777/"
@@ -102,14 +124,14 @@
             android:defaultValue="true"
             android:key="append_timestamp"
             android:summary="将发送时间加到短信结尾"
-            android:title="加时间戳 " />
+            android:title="签名（加时间戳） " />
 
         <com.zjhcsoft.sms.IntEditTextPreference
             android:defaultValue="2"
             android:dialogTitle="延迟上限"
             android:key="limit_hours"
             android:numeric="integer"
-            android:summary="小时\r\n延迟较多的短信不再发送。否则白发"
+            android:summary="小时\r\n延迟过多的短信做抛弃处理"
             android:title="延迟上限 " />
         <com.zjhcsoft.sms.IntEditTextPreference
             android:defaultValue="100"
@@ -133,5 +155,4 @@
             android:summary="行\r\n，超限则清除；重启有效"
             android:title="保留运行日志" />
     </PreferenceCategory>
-
 </PreferenceScreen>

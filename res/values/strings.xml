@@ -16,7 +16,8 @@
     <string name="menu_failure">失败记录</string>
     <string name="menu_setting">设置</string>
     <string name="menu_reboot">reboot</string>
-    <string name="menu_test">test</string>
+    <string name="menu_test">马上测试</string>
+    <string name="menu_exception">异常跟踪</string>
     <string name="menu_about">关于</string>
     <string name="service_started">服务运行中</string>
     <string name="label_imei">本机识别码(IMEI)</string>
@@ -24,22 +25,43 @@
     <string name="label_cur_status">下载服务：</string>
     <string name="label_area">区域</string>
     <string name="label_fail">发送失败：</string>
+    
     <string name="dash">----</string>
     <string name="slash">/</string>
     <string name="head_run_static">运行统计</string>
     <string name="head_log">近期日志</string>
+    
     <string name="label_count_scan">扫描次数：</string>
     <string name="lab_count_send">发送短信条数：</string>
     <string name="label_count_get">总数/安排：</string>
     <string name="label_count_done">派发/寄出/送达：</string>
+    
+    <string name="rt_queue">排队</string>
+    <string name="rt_sent">寄出</string>
+    <string name="rt_delivered">送达</string>
+    <string name="rt_failed">失败</string>
+    <string name="label_delay">平均延迟</string>
+   <string name="label_delay_unit">分钟</string>
+    
     <string name="unwork">未运行</string>
+    
     <string name="title_activity_fail_list">发送失败记录</string>
     <string name="title_activity_list_send">发送历史</string>
-    <string name="sample_long_date">2013-01-01 11:00:12</string>
+    <string name="title_activity_exception_list">异常跟踪</string>
+    <string name="label_re">重新派发：</string>
+    <string name="sample_long_date">2013en dash01en dash01 11:00:12</string>
+    <string name="sample_nums">0</string>
     <string name="crash_toast_text">啊呀，崩溃了！请把明细报告发给开发人员，以帮助解决问题</string>
     <string name="sample_verylong_text">绝对是烤箱！！
  	    \r\n排名第一。中国人显然太不会用烤箱了，就知道微波炉这种只能温饭的东西。烤箱这玩意儿简直是万能的，比炒菜锅好用多了</string>
-    <string name="cb_tv_showall">全部显示</string>
+    <string name="cb_tv_showall">仅显示当天</string>
     <string name="title_activity_testcase">测试专用</string>
-
+    <string name="test_sms_content">这是一条短信小网关测试短信，如果令您反感，请联系管理员！（0123456789ABCDEFGabcdefgz@!@#%^）</string>
+    
+    <string name="speed0">很快</string>
+    <string name="speed1">正常</string>
+    <string name="speed2">稍慢</string>
+    <string name="speed3">极慢</string>
+    <string name="speed4">    </string>
+    
 </resources>

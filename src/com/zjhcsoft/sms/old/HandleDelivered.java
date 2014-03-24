@@ -1,4 +1,4 @@
-package com.zjhcsoft.sms;
+package com.zjhcsoft.sms.old;
 
 import android.app.Activity;
 import android.content.BroadcastReceiver;
@@ -11,6 +11,9 @@ import android.os.Bundle;
 import android.util.Log;
 import android.widget.Toast;
 
+import com.zjhcsoft.sms.DBHelper;
+import com.zjhcsoft.sms.LogHelper;
+import com.zjhcsoft.sms.TimeConvert;
 import com.zjhcsoft.sms.DBHelper.SendLog;
 
 /**

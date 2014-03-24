@@ -1,4 +1,4 @@
-package com.zjhcsoft.sms;
+package com.zjhcsoft.sms.old;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -22,6 +22,10 @@ import android.os.IBinder;
 import android.telephony.SmsManager;
 import android.util.Log;
 
+import com.zjhcsoft.sms.DBHelper;
+import com.zjhcsoft.sms.LogHelper;
+import com.zjhcsoft.sms.SmsRobotApp;
+import com.zjhcsoft.sms.TimeConvert;
 import com.zjhcsoft.sms.DBHelper.SendLog;
 
 public class SmsLaunchService extends Service {
@@ -31,7 +35,7 @@ public class SmsLaunchService extends Service {
 	private int mCountDone = 0;
 	int count_sent = 0;
 	int count_fail = 0;
-	int count_delivered = 0;
+	public int count_delivered = 0;
 	private boolean m_print_debug;/* 有多少日志都打印 */
 	private int m_interval_send; /* 发送间隔 */
 	private final int INTERVAL_READ=1000 * 60* 2;//扫读一次数据库的间隔

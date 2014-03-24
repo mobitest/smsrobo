@@ -17,7 +17,7 @@ public class DBHelper extends SQLiteOpenHelper{
      * 数据库版本号
      * 只在需要升级数据库时，需改变该版本号。
      */
-    private static final int DATABASE_VERSION = 3;
+    private static final int DATABASE_VERSION = 5;
     /**
      * 数据库名称
      */
@@ -41,7 +41,7 @@ public class DBHelper extends SQLiteOpenHelper{
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         Log.i(TAG, "onUpgrade from version:" + oldVersion + " to version:" + newVersion);
-        if(oldVersion<3){
+        if(oldVersion<newVersion){
         	//直接重建数据库
         	clearAllTables(db);
 //        	//备份数据
@@ -70,11 +70,11 @@ public class DBHelper extends SQLiteOpenHelper{
     }
     
     /**
-     * 清除数据库
+     * 清除数据库（删表重建）
      */
     public void clearAllTables(SQLiteDatabase db){
 //        SQLiteDatabase db = getWritableDatabase();
-    	String tables[] = {SendLog.TABLE_NAME, SendFailure.TABLE_NAME, NetFailure.TABLE_NAME};
+    	String tables[] = {SendLog.TABLE_NAME, SendFailure.TABLE_NAME, AppException.TABLE_NAME};
     	for(int i=0; i< tables.length; i++){
     		db.execSQL("DROP TABLE IF EXISTS " +tables[i]);
     		Log.d("drop table", tables[i]);
@@ -195,17 +195,17 @@ public class DBHelper extends SQLiteOpenHelper{
         
         Log.d(TAG, "onCreate, CREATE TABLE " + SendFailure.TABLE_NAME);
 
-        final String createNetFailureSql = 
-        		"CREATE TABLE " +NetFailure.TABLE_NAME + " (" 
-                        + NetFailure.ID + " INTEGER PRIMARY KEY AUTOINCREMENT," //改名
-                        + NetFailure.STEP + " TEXT,"
-                        + NetFailure.TEXT + " TEXT,"
-                        + NetFailure.FAIL_DT + " TEXT,"
-                        + NetFailure.REASON + " TEXT" 
+        final String createAppExceptionSql = 
+        		"CREATE TABLE " +AppException.TABLE_NAME + " (" 
+                        + AppException.ID + " INTEGER PRIMARY KEY AUTOINCREMENT," //改名
+                        + AppException.STEP + " TEXT,"
+                        + AppException.MSG + " TEXT,"
+                        + AppException.RAISE_DT + " TEXT,"
+                        + AppException.STACK + " TEXT" 
                         +");";
-        db.execSQL(createNetFailureSql);
+        db.execSQL(createAppExceptionSql);
         
-        Log.d(TAG, "onCreate, CREATE TABLE " + NetFailure.TABLE_NAME);
+        Log.d(TAG, "onCreate, CREATE TABLE " + AppException.TABLE_NAME);
 
     }
 
@@ -272,14 +272,14 @@ public class DBHelper extends SQLiteOpenHelper{
 	/**
 	 * 网络失败
 	 */
-	public static class NetFailure{
-		public static final String TABLE_NAME = "net_failure";
+	public static class AppException{
+		public static final String TABLE_NAME = "app_exception";
 		public static final String ID="_id";
 		public static final String STEP="step";//失败环节
 		public static final String CODE = "code";
-		public static final String TEXT="msg";
-		public static final String REASON="reason";
-		public static final String FAIL_DT="fail_dt";//失败时间 YYYY-MM-DD hh:mm:ss
+		public static final String MSG="msg";
+		public static final String STACK="stack";
+		public static final String RAISE_DT="raise_dt";//失败时间 YYYY-MM-DD hh:mm:ss
 		
 	}
 }

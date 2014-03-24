@@ -1,11 +1,14 @@
 package com.zjhcsoft.sms.activity;
 
+import java.util.Date;
+
 import android.app.ListActivity;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.support.v4.app.NavUtils;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -13,10 +16,12 @@ import android.widget.ListView;
 import android.widget.SimpleCursorAdapter;
 
 import com.zjhcsoft.sms.DBHelper;
+import com.zjhcsoft.sms.DBHelper.AppException;
 import com.zjhcsoft.sms.DBHelper.SendFailure;
+import com.zjhcsoft.sms.TimeConvert;
 import com.zjhcsoft.smsrobot1.R;
 
-public class FailListActivity extends ListActivity {
+public class ExceptionListActivity extends ListActivity {
 
 //	private static final String TAG = "FailListActivity";
     // This is the Adapter being used to display the list's data
@@ -27,6 +32,8 @@ public class FailListActivity extends ListActivity {
 
     // This is the select criteria
     static final String SELECTION = null;
+
+	private static final String TAG = "ExceptionListActivity";
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -41,17 +48,27 @@ public class FailListActivity extends ListActivity {
 	}
 	@SuppressWarnings("deprecation")
 	private void setListData(){
-		DBHelper  dbhelper = new DBHelper(this);
-		SQLiteDatabase db  = dbhelper.getWritableDatabase();
-		String sql = "select _id,"+ SendFailure.TARGET + "," + SendFailure.STEP +"," + SendFailure.REL_ID + ","+ SendFailure.SCAN_DT + ",  " + SendFailure.CODE + ", " + SendFailure.FAIL_DT  +"," + SendFailure.REASON+ "  from "+ SendFailure.TABLE_NAME + " order by "+ SendFailure.FAIL_DT +" desc";
-		Cursor cursor = db.rawQuery(sql, null); 
-		startManagingCursor(cursor);
-//		long rows = cursor.getCount();
-//		Log.d(TAG, "get rows="+rows);
-		 mAdapter = new SimpleCursorAdapter(this, R.layout.layout_sendfailure, cursor, 
-				new String[]{SendFailure.REL_ID, SendFailure.STEP, SendFailure.REASON, SendFailure.SCAN_DT, SendFailure.FAIL_DT},
-				new int[]{R.id.rel_id, R.id.msg,  R.id.reason, R.id.scan_dt, R.id.fail_dt});  
-		setListAdapter(mAdapter);       
+		try {
+			
+			DBHelper  dbhelper = new DBHelper(this);
+			SQLiteDatabase db  = dbhelper.getWritableDatabase();
+			String lastWeek = TimeConvert.time2Str((new Date()).getTime() - 1000*60*60 *24* 5, TimeConvert.DATE_PATTERN_B);
+			Log.d("exceptionActivity", "lastWeek="+lastWeek);
+			String sql = "select _id,"+ AppException.MSG + "," + AppException.STACK +"," + AppException.RAISE_DT + "  from "+ AppException.TABLE_NAME 
+					+" where " + AppException.RAISE_DT +"> ? " 
+					+ " order by "+ AppException.RAISE_DT +" desc";
+			Log.d(TAG, "sql="+sql);
+			Cursor cursor = db.rawQuery(sql , new String[]{lastWeek}); 
+			startManagingCursor(cursor);
+			long rows = cursor.getCount();
+			Log.d("exceptionActivity", "get rows="+rows);
+			mAdapter = new SimpleCursorAdapter(this, R.layout.layout_exception, cursor, 
+					new String[]{ AppException.MSG, AppException.STACK, AppException.RAISE_DT},
+					new int[]{R.id.exc_msg,  R.id.exc_track, R.id.exc_raise_dt});  
+			setListAdapter(mAdapter);       
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 		
 	}
 		

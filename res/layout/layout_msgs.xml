@@ -27,7 +27,7 @@
         android:textColor="@color/text_color_gray" />
 
     <TextView
-        android:id="@+id/step"
+        android:id="@+id/exc_msg"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"

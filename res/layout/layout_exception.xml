@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+    <TextView
+        android:id="@+id/exc_raise_dt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_margin="5dp"
+        android:text="@string/dash"
+        android:textColor="@color/text_color_gray" />
+<TextView
+    android:id="@+id/exc_msg"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentTop="true"
+    android:layout_margin="5dp"
+    android:layout_toLeftOf="@id/exc_raise_dt"
+    android:text="@string/dash" />
+
+    <TextView
+        android:id="@+id/exc_track"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/exc_msg"
+        android:layout_margin="5dp"
+        android:lines="3"
+        android:text="@string/dash"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="@color/text_color_gray" />
+
+
+
+</RelativeLayout>

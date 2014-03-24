@@ -1,8 +1,11 @@
 package com.zjhcsoft.sms.activity;
 
+import java.util.Date;
+
 import android.annotation.TargetApi;
 import android.app.ListActivity;
 import android.content.Intent;
+import android.content.res.Resources;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Build;
@@ -13,37 +16,55 @@ import android.text.TextWatcher;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
+import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.CompoundButton.OnCheckedChangeListener;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.EditText;
+import android.widget.ListView;
 import android.widget.SimpleCursorAdapter;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.zjhcsoft.sms.DBHelper;
+import com.zjhcsoft.sms.TimeConvert;
 import com.zjhcsoft.sms.DBHelper.SendLog;
 import com.zjhcsoft.smsrobot1.R;
 
 public class ListSendActivity extends ListActivity {
 	private String TAG = "ListSendActivity";
 	private SimpleCursorAdapter mListAdapter;
-	private SQLiteDatabase db;
-	private CheckBox mCbShowAll ;
+	private SQLiteDatabase db=null;
+	private CheckBox mCbShowTodayOnly ;
 	private TextView mTvRows;
 	private EditText mInputMsgSearch;
+	private String mStatus;
+	private Spinner mSpinner1;
+	private String[] status_codes;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		Intent intent = getIntent();
+		mStatus = intent.getStringExtra("status");
+		if(mStatus !=null){
+			Log.d(TAG, mStatus);
+		}else{
+			Log.d(TAG, "no status set");
+			
+			mStatus="all";
+		}
 		setContentView(R.layout.layout_sendlog_main) ;
-		mCbShowAll = (CheckBox)findViewById(R.id.cb_show_all);
+		mCbShowTodayOnly = (CheckBox)findViewById(R.id.cb_show_today);
 		mTvRows = (TextView) findViewById(R.id.tv_log_rows);
 		mInputMsgSearch = (EditText)findViewById(R.id.input_msg_search);
 		// Show the Up button in the action bar.
 		setupActionBar();
-		setListData();
-		mCbShowAll.setOnCheckedChangeListener(new  OnCheckedChangeListener(){
+		mCbShowTodayOnly.setOnCheckedChangeListener(new  OnCheckedChangeListener(){
 			@Override
 			public void onCheckedChanged(CompoundButton arg0, boolean arg1) {
 				setListData();
@@ -56,6 +77,40 @@ public class ListSendActivity extends ListActivity {
 	        public void beforeTextChanged(CharSequence s, int start, int count, int after){}
 	        public void onTextChanged(CharSequence s, int start, int before, int count){}
 	    }); 
+		
+		
+        mSpinner1 = (Spinner) findViewById(R.id.spinner1);
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(
+                this, R.array.status_name, android.R.layout.simple_spinner_item);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        mSpinner1.setAdapter(adapter);
+        mSpinner1.setOnItemSelectedListener(
+                new OnItemSelectedListener() {
+                    public void onItemSelected(
+                            AdapterView<?> parent, View view, int position, long id) {
+                        Log.w(TAG,"Spinner1: position=" + position + " id=" + id);
+                        String s = status_codes[position];
+                        if(!s.equals(mStatus)){
+                        	mStatus = s;
+                        	setListData();
+                        }
+                    }
+
+                    public void onNothingSelected(AdapterView<?> parent) {
+                    	Log.w(TAG,"Spinner1: unselected");
+                    }
+                });	
+		Resources res =getResources();
+		status_codes = res.getStringArray(R.array.status_code);
+		int i=0;
+		for(i=0; i<status_codes.length; i++){
+			if(status_codes[i].equals(mStatus)) break;
+		}
+		if(i>status_codes.length) i=0;
+		mStatus = status_codes[i];
+        mSpinner1.setSelection(i, true);
+        
+		setListData();
 	}
 	@Override
 	protected void onDestroy() {
@@ -67,13 +122,22 @@ public class ListSendActivity extends ListActivity {
 		}
 		super.onDestroy();
 	}
-    public static boolean isIntegerRegex(String str) {
+    @Override
+	protected void onListItemClick(ListView l, View v, int position, long id) {
+    	getListAdapter().getItem(position);
+		// TODO Auto-generated method stub
+		super.onListItemClick(l, v, position, id);
+	}
+	public static boolean isIntegerRegex(String str) {
         return str.matches("^[0-9]+$");
     }
 	@SuppressWarnings("deprecation")
 	private void setListData(){
 		try{
-			String where = mCbShowAll.isChecked()? "":" where (status is null) or status in('ing','fail') ";
+			String lastday = TimeConvert.time2Str((new Date()).getTime() - 1000*60*60 *24* 1, TimeConvert.DATE_PATTERN_B);
+			Log.d(TAG,  "lastWeek="+lastday +";mstatus="+ mStatus);
+			
+			String where = mCbShowTodayOnly.isChecked()? " where scan_dt> '"+ lastday +"' ":"";
 			String text = mInputMsgSearch.getText().toString();
 			if(text.length()>0){
 				if(isIntegerRegex(text)){
@@ -83,6 +147,17 @@ public class ListSendActivity extends ListActivity {
 				}
 				where = where.length()==0? " where "+ text : where + " and " + text; 
 			}
+			
+			//状态
+			String whereStatus;
+			if(mStatus.equals("all")){
+				whereStatus = null;
+			}else{
+				whereStatus = " status='" + mStatus +"'";
+			}		
+			if(null!=whereStatus) where =  where.length()==0? (" where "+ whereStatus) : where + " and " + whereStatus; 
+			
+			if(db!=null) db.close();
 			DBHelper  dbhelper = new DBHelper(this);
 			db  = dbhelper.getReadableDatabase();
 			String sql = "select _id,"+ "'('|| _id ||')  ' ||"+SendLog.TARGET + " as phone," + SendLog.TEXT 
@@ -90,7 +165,7 @@ public class ListSendActivity extends ListActivity {
 					+ ",strftime('%m-%d %H:%M'," +SendLog.SCAN_DT  +") as "+ SendLog.SCAN_DT
 					+ ",'派发'||strftime('%H:%M'," +SendLog.SEND_DT  +") as "+ SendLog.SEND_DT
 					+  ", case "+  SendLog.STATUS+" when 'sent' then '已寄出' when 'fail' then '丢弃' else '' end as " + SendLog.STATUS 
-					+ ", case when " + SendLog.STATUS + " in('sent' ,'delivered')   then ''  else '尝试'||" + SendLog.RETRY_TIMES+"" +"||'次' end as " + SendLog.STATUS + "_fail from "+ SendLog.TABLE_NAME 
+					+ ", case "+ SendLog.RETRY_TIMES + " when 0 then '' else '尝试'||" + SendLog.RETRY_TIMES+"" +"||'次'  end as " + SendLog.STATUS + "_fail from "+ SendLog.TABLE_NAME 
 					+ where 
 					+" order by "+ SendLog.ID+" desc,"+  SendLog.TARGET+"";
 			Log.d(TAG, "sql="+sql);
@@ -100,7 +175,7 @@ public class ListSendActivity extends ListActivity {
 			startManagingCursor(cursor);
 			mListAdapter = new SimpleCursorAdapter(this, R.layout.layout_msgs, cursor, 
 					new String[]{"phone", SendLog.TEXT, "delay", SendLog.STATUS, SendLog.STATUS +"_fail", SendLog.SCAN_DT, SendLog.SEND_DT},
-					new int[]{R.id.msg_phone, R.id.msg_text, R.id.msg_scan_dt,  R.id.step, R.id.msg_status_fail, R.id.msg_delay, R.id.msg_sent_dt});  
+					new int[]{R.id.msg_phone, R.id.msg_text, R.id.msg_scan_dt,  R.id.exc_msg, R.id.msg_status_fail, R.id.msg_delay, R.id.msg_sent_dt});  
 			getListView().setAdapter(mListAdapter);       
 		}catch(Exception e){
 			Toast.makeText(this, "显示列表异常："+ e.getMessage(), Toast.LENGTH_LONG).show();

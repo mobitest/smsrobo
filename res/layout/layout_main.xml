@@ -34,16 +34,6 @@
             android:textOn="@string/send_start" />
 
         <TextView
-            android:id="@+id/status"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignBottom="@+id/toggleButton1"
-            android:layout_centerVertical="true"
-            android:layout_toLeftOf="@+id/toggleButton1"
-            android:text="@string/unwork"
-            android:textColor="@color/text_color_gray" />
-
-        <TextView
             android:id="@+id/label_status"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -65,6 +55,27 @@
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:textColor="@color/text_color_blue" />
 
+        <TextView
+            android:id="@+id/status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/toggleButton1"
+            android:layout_alignBottom="@+id/toggleButton1"
+            android:layout_toLeftOf="@+id/count_scan"
+            android:text="@string/unwork"
+            android:textColor="@color/text_color_gray" />
+
+        <TextView
+            android:id="@+id/count_scan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/toggleButton1"
+            android:layout_alignBottom="@+id/toggleButton1"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_toLeftOf="@+id/toggleButton1"
+            android:text="@string/dash"
+            android:textColor="@color/text_color_blue" />
     </RelativeLayout>
 
     <LinearLayout
@@ -75,35 +86,232 @@
         android:layout_alignParentTop="true"
         android:orientation="vertical" >
 
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:id="@+id/stats_root"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/head_run_static"
-            android:textAppearance="?android:attr/textAppearanceMedium" />
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:baselineAligned="false" >
+
+            <TextView
+                android:id="@+id/label_send"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/head_run_static"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <TextView
+                android:id="@+id/stats_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:text="@string/dash"
+                android:textColor="#ccc" />
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginLeft="15dp"
+                android:background="@color/rt_sent"
+                android:text="@string/dash"
+                android:textColor="#fff" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:background="@color/rt_delivered"
+                android:text="@string/dash"
+                android:textColor="#fff" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:background="@color/rt_failed"
+                android:text="@string/dash"
+                android:textColor="#fff" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:background="@color/rt_queue"
+                android:text="@string/dash"
+                android:textColor="#fff" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/realtime_root"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:weightSum="4" >
+
+            <RelativeLayout  android:id="@+id/container_queue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:layout_weight="1"
+                android:background="@drawable/round_corner" >
+
+                <TextView
+                    android:id="@+id/count_done"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/sample_nums"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="@color/rt_queue" />
+
+                <TextView
+                    android:id="@+id/tv_color_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/count_done"
+                    android:background="@color/rt_queue" />
+
+                <TextView
+                    android:id="@+id/labe_count_get2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_color_1"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/rt_queue" />
+            </RelativeLayout>
+
+            <RelativeLayout  android:id="@+id/container_sent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:layout_weight="1"
+                android:background="@drawable/round_corner" >
+
+                <TextView
+                    android:id="@+id/count_sent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/sample_nums"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="@color/rt_sent" />
+
+                <TextView
+                    android:id="@+id/tv_pack_again"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/count_sent"
+                    android:layout_alignBottom="@+id/count_sent"
+                    android:layout_alignParentRight="false"
+                    android:layout_toRightOf="@id/count_sent"
+                    android:text="@string/dash" />
+
+                <TextView
+                    android:id="@+id/tv_color_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_below="@+id/count_sent"
+                    android:layout_centerHorizontal="true"
+                    android:background="@color/rt_sent" />
+
+                <TextView
+                    android:id="@+id/labe_count_get22"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                     android:layout_below="@+id/tv_color_2"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/rt_sent" />
+            </RelativeLayout>
+
+            <RelativeLayout  android:id="@+id/container_delivered"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:layout_weight="1"
+                android:background="@drawable/round_corner" >
+
+                <TextView
+                    android:id="@+id/count_delivered"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/sample_nums"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="@color/rt_delivered" />
+
+                <TextView
+                    android:id="@+id/tv_color_3"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                     android:layout_below="@+id/count_delivered"
+                    android:layout_centerHorizontal="true"
+                    android:background="@color/rt_delivered" />
+
+                <TextView
+                    android:id="@+id/labe_count_get33"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_color_3"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/rt_delivered" />
+            </RelativeLayout>
+
+            <RelativeLayout  android:id="@+id/container_fail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:layout_weight="1"
+                android:background="@drawable/round_corner" >
+
+                <TextView
+                    android:id="@+id/count_fail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/sample_nums"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="@color/rt_failed" />
+
+                <TextView
+                    android:id="@+id/tv_color_4"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                     android:layout_below="@+id/count_fail"
+                    android:layout_centerHorizontal="true"
+                    android:background="@color/rt_failed" />
+
+                <TextView
+                    android:id="@+id/labe_count_get44"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_color_4"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/rt_failed" />
+            </RelativeLayout>
+        </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" >
-
-            <TextView
-                android:id="@+id/label_count_scan"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/label_count_scan" />
-
-            <TextView
-                android:id="@+id/count_scan"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/dash"
-                android:textColor="@color/text_color_blue" />
+            android:layout_height="wrap_content"
+            android:visibility="gone" >
 
             <TextView
                 android:id="@+id/labe_count_get"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="5dp"
                 android:text="@string/label_count_get" />
 
             <TextView
@@ -125,7 +333,7 @@
                 android:text="@string/dash"
                 android:textColor="@color/text_color_blue" />
         </LinearLayout>
-
+        <!--
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content" >
@@ -143,23 +351,13 @@
                 android:text="@string/dash"
                 android:textColor="@color/dynatext" />
 
-        </LinearLayout>
-        <!--
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" >
-
             <TextView
-                android:id="@+id/label_count_send"
+                android:id="@+id/textView_label_re"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                android:text="@string/lab_count_send" />
-
-
-
+                android:layout_marginLeft="5dp"
+                android:text="@string/label_re" />
         </LinearLayout>
-        -->
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -202,7 +400,164 @@
                 android:text="@string/dash"
                 android:textColor="@color/text_color_blue" />
         </LinearLayout>
+        -->
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <ProgressBar
+                android:id="@+id/progressBar1"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp" >
+
+            <TextView
+                android:id="@+id/label_label_delay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/label_delay"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+            <TextView
+                android:id="@+id/stats_speed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:text="@string/sample_nums"
+                android:layout_marginLeft="5dp"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#00f" />
+            <TextView
+                android:id="@+id/stats_speed_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:text="@string/label_delay_unit"
+                android:textColor="#ccc" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/speed_now"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            >
+
+            <ImageView
+                android:contentDescription="@string/dash"
+                android:id="@+id/imageView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/marker" />
+
+      </LinearLayout>        
+        <!-- 速度的刻度 -->
+        <LinearLayout
+            android:id="@+id/speed_ruler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:weightSum="5" >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|center"
+                android:layout_weight="1"
+                android:layout_margin="1dp"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@color/text_color_gray" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal|center"
+                    android:text="@string/speed0" />
+
+                </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" android:layout_margin="1dp"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@color/text_color_gray" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal|center"
+                   android:text="@string/speed1" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" android:layout_margin="1dp"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@color/text_color_gray" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal|center"
+                    android:text="@string/speed2" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" android:layout_margin="1dp"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@color/text_color_gray" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal|center"
+                   android:text="@string/speed3" />
+            </LinearLayout>                        
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" android:layout_margin="1dp"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@color/text_color_gray" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal|center"
+                   android:text="@string/speed4" />
+            </LinearLayout>
+        </LinearLayout>
+        
         <com.zjhcsoft.sms.LogTextBox
             android:id="@+id/logTextBox"
             android:layout_width="match_parent"
@@ -212,7 +567,6 @@
             android:scrollbars="vertical"
             android:text="@string/dash"
             android:textColor="@color/charttitle" />
-
     </LinearLayout>
 
 </RelativeLayout>

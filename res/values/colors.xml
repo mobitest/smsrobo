@@ -42,4 +42,17 @@
 	<color name="odd_bg_color">#ffffff</color>
 	<color name="even_bg_color">#f6f6f6</color>
 	
+	<!-- 状态表示，寄出、送达、失败、排队 -->
+	<color name="rt_sent">#669900</color>
+	<color name="rt_delivered">#0099cc</color>
+	<color name="rt_failed">#ff8800</color>
+    <color name="rt_queue">#9933cc</color>
+    
+    <!-- 速度 -->
+    <color name="speed0">#9c0</color>
+    <color name="speed1">#09c</color>
+    <color name="speed2">#f80</color>
+    <color name="speed3">#f44</color>
+	<color name="speed4">#c00</color>
+    			
 </resources>

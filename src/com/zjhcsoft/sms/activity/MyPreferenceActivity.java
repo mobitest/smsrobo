@@ -98,6 +98,10 @@ public class MyPreferenceActivity extends PreferenceActivity implements OnShared
         }
     }
 
+    /**
+     * 定制参数的说明，合并显示当前设置的值和summary属性。
+     * @param p
+     */
     private void updatePrefSummary(Preference p) {
     	//"1；说明：";
     	final String split = "  ";

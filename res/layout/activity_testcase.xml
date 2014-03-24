@@ -8,28 +8,78 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".TestcaseActivity" >
 
+    <EditText
+        android:id="@+id/test_msg"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/test_target"
+        android:layout_below="@+id/test_target"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:text="@string/test_sms_content" />
+
     <TextView
-        android:id="@+id/textView1"
+        android:id="@+id/test_label_send"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/hello_world" />
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:text="测试短信"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <EditText
+        android:id="@+id/test_target"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/test_label_send"
+        android:layout_below="@+id/test_label_send"
+        android:layout_marginLeft="28dp"
+        android:layout_marginTop="21dp"
+        android:ems="10"
+        android:text="15372095937" />
+
+    <EditText
+        android:id="@+id/test_nums"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/test_msg"
+        android:layout_below="@+id/test_msg"
+        android:hint="条数"
+        android:inputType="number"
+        android:text="6" />
 
     <Button
-        android:id="@+id/btn_test_del"
+        android:id="@+id/btn_test_batch_new"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textView1"
-        android:layout_below="@+id/textView1"
-        android:layout_marginLeft="31dp"
-        android:layout_marginTop="86dp"
-        android:text="清除数据" />
+        android:layout_alignTop="@+id/test_nums"
+        android:layout_toRightOf="@+id/test_nums"
+        android:text="批量添加排队短信" />
 
     <Button
         android:id="@+id/btn_add_reboot_row"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignRight="@+id/btn_test_del"
-        android:layout_centerVertical="true"
-        android:text="添加" />
+        android:layout_alignLeft="@+id/test_label_send"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="26dp"
+        android:text="模拟堵塞短信" />
+
+    <Button
+        android:id="@+id/btn_test_cleardata"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btn_add_reboot_row"
+        android:layout_alignParentLeft="true"
+        android:text="清除历史记录（发送、失败、异常)" />
+
+    <Button
+        android:id="@+id/btn_test_resetcounter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/btn_add_reboot_row"
+        android:layout_alignBottom="@+id/btn_add_reboot_row"
+        android:layout_toRightOf="@+id/btn_add_reboot_row"
+        android:text="重置计数器测试" />
 
 </RelativeLayout>

@@ -47,5 +47,19 @@
         <item>12</item>  
         <item>32518</item>
         </string-array>
-   
+        
+<string-array name="status_name">
+    <item>(全部)</item>
+    <item>排队</item>
+    <item>寄出</item>
+    <item>送达</item>
+    <item>失败</item>
+</string-array>    
+ <string-array name="status_code">
+    <item>all</item>
+     <item>queue</item>
+    <item>sent</item>
+    <item>delivered</item>
+    <item>fail</item>
+</string-array>      
 </resources>

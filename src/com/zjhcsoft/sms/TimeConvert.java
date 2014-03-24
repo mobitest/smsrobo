@@ -60,6 +60,10 @@ public class TimeConvert {
         return format.format(new Date(time));
     }
     
+    /**
+     * 返回当前时间，完整格式，yyyy-MM-dd HH:mm:ss
+     * @return
+     */
     public static String getTimestamp(){
     	 return time2Str(new Date().getTime(), DATE_PATTERN_B);
     }
@@ -74,6 +78,10 @@ public class TimeConvert {
     	return time2Str(cur, DATE_PATTERN_B);
     	
     }
+    /**
+     * 
+     * @return 当前时间，HH:mm:ss
+     */
     public static String getCurrTime(){
     	return time2Str(new Date().getTime(), "HH:mm:ss");
     }

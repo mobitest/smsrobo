@@ -14,7 +14,7 @@
         android:textStyle="bold" />
 
     <TextView
-        android:id="@+id/reason"
+        android:id="@+id/msg"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
@@ -27,18 +27,16 @@
         android:textColor="@color/text_color_blue" />
 
 <TextView
-    android:id="@+id/step"
+    android:id="@+id/reason"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_alignParentLeft="true"
-    android:layout_alignParentRight="false"
-    android:layout_alignParentTop="false"
-    android:layout_below="@id/reason"
+    android:layout_below="@id/exc_track"
     android:layout_centerVertical="true"
+    android:layout_margin="5dp"
     android:layout_marginRight="15dp"
     android:text="@string/dash"
-    android:textColor="@color/text_color_blue"
-    android:visibility="gone" />
+    android:textColor="@color/text_color_blue" />
 
     <TextView
         android:id="@+id/scan_dt"

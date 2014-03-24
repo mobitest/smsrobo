@@ -1,4 +1,4 @@
-package com.zjhcsoft.sms;
+package com.zjhcsoft.sms.old;
 
 
 import java.io.BufferedReader;
@@ -33,6 +33,10 @@ import android.telephony.TelephonyManager;
 import android.util.Log;
 import android.widget.Toast;
 
+import com.zjhcsoft.sms.DBHelper;
+import com.zjhcsoft.sms.LogHelper;
+import com.zjhcsoft.sms.SmsRobotApp;
+import com.zjhcsoft.sms.TimeConvert;
 import com.zjhcsoft.sms.DBHelper.SendLog;
 
 public class SmsDownloadService extends android.app.Service {

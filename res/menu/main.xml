@@ -12,39 +12,54 @@
   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
   See the License for the specific language governing permissions and
   limitations under the License.
-  -->
+-->
 
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:id="@+id/menu_history"
-        android:title="@string/menu_history"
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/menu_history"
         android:icon="@android:drawable/ic_menu_share"
         android:orderInCategory="1"
-        android:showAsAction="always|withText" />
-    
-    <item android:id="@+id/menu_failure"
-        android:title="@string/menu_failure"
+        android:showAsAction="always|withText"
+        android:title="@string/menu_history"/>
+    <item
+        android:id="@+id/menu_exception"
+        android:icon="@android:drawable/ic_menu_myplaces"
+        android:menuCategory="secondary"
+        android:orderInCategory="2"
+        android:showAsAction="always"
+        android:title="@string/menu_exception"/>
+    <item
+        android:id="@+id/menu_setting"
+        android:icon="@android:drawable/ic_menu_preferences"
+        android:orderInCategory="8"
+        android:showAsAction="always"
+        android:title="@string/menu_setting"/>
+    <item
+        android:id="@+id/menu_failure"
         android:icon="@android:drawable/ic_menu_crop"
         android:orderInCategory="1"
-        android:showAsAction="ifRoom|withText" />
-    
-    <item android:id="@+id/menu_about"
-        android:title="@string/menu_about"
-        android:orderInCategory="3"
-        android:showAsAction="ifRoom|withText" 
-        android:icon="@android:drawable/ic_menu_info_details"/>
-     <item android:id="@+id/menu_setting"
-        android:title="@string/menu_setting"
-        android:icon="@android:drawable/ic_menu_preferences"
-        android:orderInCategory="2"
-        android:showAsAction="always" />
-         <item android:id="@+id/menu_reboot"
-        android:title="@string/menu_reboot"
+        android:showAsAction="never"
+        android:title="@string/menu_failure"/>
+    <item
+        android:id="@+id/menu_about"
+        android:icon="@android:drawable/ic_menu_info_details"
+        android:orderInCategory="5"
+        android:showAsAction="ifRoom|withText"
+        android:title="@string/menu_about"/>
+    <item
+        android:id="@+id/menu_reboot"
+        android:icon="@android:drawable/ic_lock_power_off"
         android:orderInCategory="6"
-        android:showAsAction="always|withText"
-        android:icon="@android:drawable/ic_lock_power_off"/>
-         <item android:id="@+id/menu_test"
-        android:title="@string/menu_test"
-        android:orderInCategory="7"
-        android:showAsAction="never|ifRoom" 
-        android:icon="@android:drawable/ic_menu_myplaces" android:menuCategory="secondary"/>    
+        android:showAsAction="never"
+        android:title="@string/menu_reboot"
+        android:visible="false"/>
+    <item
+        android:id="@+id/menu_test"
+        android:icon="@android:drawable/ic_menu_myplaces"
+        android:menuCategory="secondary"
+        android:orderInCategory="3"
+        android:showAsAction="never"
+        android:title="@string/menu_test"/>
+
 </menu>
