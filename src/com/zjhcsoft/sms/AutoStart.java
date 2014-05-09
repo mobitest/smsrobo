@@ -1,12 +1,9 @@
 package com.zjhcsoft.sms;
 
-import android.app.AlarmManager;
-import android.app.PendingIntent;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.os.SystemClock;
 import android.util.Log;
 
 import com.zjhcsoft.sms.activity.MainActivity;

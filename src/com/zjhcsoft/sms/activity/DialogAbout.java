@@ -16,11 +16,9 @@ public class DialogAbout {
 
     private Context mContext;
 
-    private SmsRobotApp app;
 
     public DialogAbout(Context mContext, SmsRobotApp app) {
         this.mContext = mContext;
-        this.app = app;
     }
 
     public void init(AlertDialog.Builder builder) {

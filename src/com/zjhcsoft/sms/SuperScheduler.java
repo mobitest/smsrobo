@@ -11,7 +11,6 @@ import android.os.SystemClock;
 import android.util.Log;
 
 import com.zjhcsoft.sms.service.SmsFetchIntentService;
-import com.zjhcsoft.sms.service.SmsLaunchIntentService;
 import com.zjhcsoft.sms.service.SmsTraceIntentService;
 
 public class SuperScheduler {

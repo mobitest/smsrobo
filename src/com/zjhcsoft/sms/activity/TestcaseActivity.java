@@ -1,14 +1,11 @@
 package com.zjhcsoft.sms.activity;
 
 import android.app.Activity;
-import android.app.AlarmManager;
-import android.app.PendingIntent;
 import android.content.ContentValues;
 import android.content.Context;
 import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
-import android.os.SystemClock;
 import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -17,16 +14,15 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.zjhcsoft.sms.DBHelper;
+import com.zjhcsoft.sms.DBHelper.SendLog;
 import com.zjhcsoft.sms.LogHelper;
 import com.zjhcsoft.sms.MsgConstant;
 import com.zjhcsoft.sms.SmsRobotApp;
 import com.zjhcsoft.sms.SuperScheduler;
-import com.zjhcsoft.sms.DBHelper.SendLog;
-import com.zjhcsoft.sms.service.SmsFetchIntentService;
+import com.zjhcsoft.sms.TimeConvert;
 import com.zjhcsoft.sms.service.SmsLaunchIntentService;
 import com.zjhcsoft.sms.service.SmsStatsIntentService;
 import com.zjhcsoft.sms.service.SmsTraceIntentService;
-import com.zjhcsoft.sms.TimeConvert;
 import com.zjhcsoft.smsrobot1.R;
 
 public class TestcaseActivity extends Activity {
