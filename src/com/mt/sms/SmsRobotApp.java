@@ -11,13 +11,10 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.util.Log;
 
-import com.mt.sms.receiver.SentReceiver;
-import com.mt.sms.service.SmsStatsIntentService;
 import com.mt.smsrobo.R;
 
-
 @ReportsCrashes(formKey = "", // will not be used
-mailTo = "yanxw@zjhcsoft.com", customReportContent = {
+mailTo = "mobitest@163.com", customReportContent = {
 		ReportField.APP_VERSION_CODE, ReportField.APP_VERSION_NAME,
 		ReportField.ANDROID_VERSION, ReportField.PHONE_MODEL,
 		ReportField.CUSTOM_DATA, ReportField.STACK_TRACE, ReportField.LOGCAT }, mode = ReportingInteractionMode.TOAST, resToastText = R.string.crash_toast_text)

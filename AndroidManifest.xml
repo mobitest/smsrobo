@@ -57,7 +57,7 @@
             android:name="com.mt.sms.service.SmsStatsIntentService" android:stopWithTask="true" >
         </service>
         <activity
-            android:name="commt.sms.activity.MainActivity"   android:label="@string/app_name" >
+            android:name="com.mt.sms.activity.MainActivity"   android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
