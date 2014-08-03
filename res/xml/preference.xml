@@ -54,7 +54,7 @@
             android:key="reboot_auto"
             android:summary="发现短信堵塞，自动重启手机以恢复正常发送。(检查库中记录，如果发送中的记录用时超过时限，则认为堵塞)"
             android:title="自动重启" />
-        <com.zjhcsoft.sms.IntEditTextPreference
+        <com.mt.sms.IntEditTextPreference
             android:defaultValue="20"
             android:key="timeout_sent"
             android:dependency="reboot_auto"
@@ -83,7 +83,7 @@
             android:title="服务器位置" />
     </PreferenceCategory>
     <PreferenceCategory android:title="运行参数" >
-        <com.zjhcsoft.sms.IntEditTextPreference
+        <com.mt.sms.IntEditTextPreference
             android.key="intervalscan"
             android:defaultValue="5"
             android:dialogTitle="设置查询间隔（分钟！）"
@@ -91,21 +91,21 @@
             android:numeric="integer"
             android:summary="分钟（缺省5分钟）\r\n完成一次发送任务的查询后，等待的时长"
             android:title="查询间隔" />
-        <com.zjhcsoft.sms.IntEditTextPreference
+        <com.mt.sms.IntEditTextPreference
             android:defaultValue="1000"
             android:dialogTitle="设置发送间隔（毫秒）"
             android:key="interval__send_1"
             android:numeric="integer"
             android:summary="毫秒（缺省1000毫秒）\r\n每条短信发送后休息的时长"
             android:title="发送间隔" />
-        <com.zjhcsoft.sms.IntEditTextPreference
+        <com.mt.sms.IntEditTextPreference
             android:defaultValue="3"
             android:dialogTitle="设置超时上限"
             android:key="timeout__socket"
             android:numeric="integer"
             android:summary="分钟\r\n超过时限，则放弃那一次下载"
             android:title="下载等待时限" />
-        <com.zjhcsoft.sms.IntEditTextPreference
+        <com.mt.sms.IntEditTextPreference
             android:defaultValue="1"
             android:dialogTitle="设置超时上限（分钟！）"
             android:key="timeout__conn"
@@ -126,14 +126,14 @@
             android:summary="将发送时间加到短信结尾"
             android:title="签名（加时间戳） " />
 
-        <com.zjhcsoft.sms.IntEditTextPreference
+        <com.mt.sms.IntEditTextPreference
             android:defaultValue="2"
             android:dialogTitle="延迟上限"
             android:key="limit_hours"
             android:numeric="integer"
             android:summary="小时\r\n延迟过多的短信做抛弃处理"
             android:title="延迟上限 " />
-        <com.zjhcsoft.sms.IntEditTextPreference
+        <com.mt.sms.IntEditTextPreference
             android:defaultValue="100"
             android:dialogTitle="每小时发送短信上限(条/小时)"
             android:key="limit_nums_pre_hour"
@@ -142,13 +142,13 @@
             android:title="发送量上限 -暂无效" />
     </PreferenceCategory>
     <PreferenceCategory android:title="自动清理" >
-        <com.zjhcsoft.sms.IntEditTextPreference
+        <com.mt.sms.IntEditTextPreference
             android:defaultValue="5000"
             android:key="limit_rows_sendlog"
             android:numeric="integer"
             android:summary="条"
             android:title="保留发送记录（条数）" />
-        <com.zjhcsoft.sms.IntEditTextPreference
+        <com.mt.sms.IntEditTextPreference
             android:defaultValue="20000"
             android:key="limit_lines_runlog"
             android:numeric="integer"

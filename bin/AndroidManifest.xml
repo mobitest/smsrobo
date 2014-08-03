@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.zjhcsoft.smsrobot1"
+    package="com.mt.smsrobo"
     android:versionCode="15"
     android:versionName="1.1.5" >
 
@@ -16,13 +16,13 @@
 
 		
     <application
-        android:name="com.zjhcsoft.sms.SmsRobotApp"
+        android:name="com.mt.sms.SmsRobotApp"
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
 		<receiver
-            android:name="com.zjhcsoft.sms.AutoStart"
+            android:name="com.mt.sms.AutoStart"
             android:enabled="true"
             android:exported="true" >
             <intent-filter android:priority="500" >
@@ -30,77 +30,62 @@
             </intent-filter>
         </receiver>
 		<receiver
-            android:name="com.zjhcsoft.sms.receiver.SentReceiver"
-            android:enabled="true"
+            android:name="com.mt.sms.receiver.SentReceiver"   android:enabled="true"
             android:exported="false"
             >
             <intent-filter android:priority="500" >
-                <action android:name="com.zjhcsoft.sms.SENT" />
+                <action android:name="com.mt.sms.SENT" />
             </intent-filter>
         </receiver>
 		<receiver
-            android:name="com.zjhcsoft.sms.receiver.DeliveredReceiver"
-            android:enabled="true"
+            android:name="com.mt.sms.receiver.DeliveredReceiver"   android:enabled="true"
             android:exported="false"
             >
             <intent-filter android:priority="500" >
-                <action android:name="com.zjhcsoft.sms.DELI" />
+                <action android:name="com.mt.sms.DELI" />
             </intent-filter>
         </receiver>
 		<service
-            android:name="com.zjhcsoft.sms.service.SmsFetchIntentService"
-             >
-        </service>
+            android:name="com.mt.sms.service.SmsFetchIntentService">   </service>
         <service
-            android:name="com.zjhcsoft.sms.service.SmsLaunchIntentService"
-            android:stopWithTask="true" >
+            android:name="com.mt.sms.service.SmsLaunchIntentService" android:stopWithTask="true" >
         </service>        
         <service
-            android:name="com.zjhcsoft.sms.service.SmsTraceIntentService"
-            android:stopWithTask="true" >
+            android:name="com.mt.sms.service.SmsTraceIntentService" android:stopWithTask="true" >
         </service>
         <service
-            android:name="com.zjhcsoft.sms.service.SmsStatsIntentService"
-            android:stopWithTask="true" >
+            android:name="com.mt.sms.service.SmsStatsIntentService" android:stopWithTask="true" >
         </service>
         <activity
-            android:name="com.zjhcsoft.sms.activity.MainActivity"
-            android:label="@string/app_name" >
+            android:name="commt.sms.activity.MainActivity"   android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.zjhcsoft.sms.activity.MyPreferenceActivity" >
-        </activity>
+        <activity android:name="com.mt.sms.activity.MyPreferenceActivity"> </activity>
         <activity
-        android:name="com.zjhcsoft.sms.activity.ExceptionListActivity"
-            android:label="@string/title_activity_exception_list"
-            android:parentActivityName="com.zjhcsoft.sms.activity.MainActivity" >
-            <meta-data
+        android:name="com.mt.sms.activity.ExceptionListActivity"   android:label="@string/title_activity_exception_list"
+            android:parentActivityName="com.mt.sms.activity.MainActivity">
+                 <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.zjhcsoft.sms.MainActivity" />
+                android:value="com.mt.sms.MainActivity" />
         </activity>
         <activity
-        android:name="com.zjhcsoft.sms.activity.FailListActivity"
-            android:label="@string/title_activity_fail_list"
-            android:parentActivityName="com.zjhcsoft.sms.activity.MainActivity" >
-            <meta-data
+        android:name="com.mt.sms.activity.FailListActivity"   android:label="@string/title_activity_fail_list"
+            android:parentActivityName="com.mt.sms.activity.MainActivity" >    <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.zjhcsoft.sms.MainActivity" />
+                android:value="com.mt.sms.MainActivity" />
         </activity>
         <activity
-            android:name="com.zjhcsoft.sms.activity.ListSendActivity"
-            android:label="@string/title_activity_list_send"
-            android:parentActivityName="com.zjhcsoft.sms.activity.MainActivity" >
-            <meta-data
+            android:name="com.mt.sms.activity.ListSendActivity"   android:label="@string/title_activity_list_send"
+            android:parentActivityName="com.mt.sms.activity.MainActivity" >    <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.zjhcsoft.sms.MainActivity" />
+                android:value="com.mt.sms.MainActivity" />
         </activity>
         <activity
-            android:name="com.zjhcsoft.sms.activity.TestcaseActivity"
-            android:label="@string/title_activity_testcase" >
+            android:name="com.mt.sms.activity.TestcaseActivity"   android:label="@string/title_activity_testcase" >
         </activity>
     </application>
 

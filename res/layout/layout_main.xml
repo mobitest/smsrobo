@@ -558,7 +558,7 @@
             </LinearLayout>
         </LinearLayout>
         
-        <com.zjhcsoft.sms.LogTextBox
+        <com.mt.sms.LogTextBox
             android:id="@+id/logTextBox"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
